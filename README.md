@@ -1,3 +1,2 @@
 # Active
-Hello, Growbal By Hirai
-test
+# Hello, Growbal. By Hirai
