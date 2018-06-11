@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- セキュリティポリシー -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+		<!-- 英数字列を電話番号やメールアドレスとして認識しない -->
+		<meta name="format-detection" content="telephone=no">
+		<!-- タッチを強調したりする -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 解像度とかレイアウトのもろもろの設定 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<!-- cssへのリンク -->
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<!-- jsへのリンク 
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+		-->
+		
+		<title>pen-d Home</title>
+	</head>
+	<body>
+
+		<!-- コンテナ -->
+		<div class="container">
+
+			<!-- 残高表示 -->
+			<div class="result">
+			<p>残高</p>
+				<p id="coin_unit">
+					<input type="text" id="coin" value="0000" disabled="disabled">
+				pen-D</p>
+			</div>
+
+			<!-- 送金 --> 
+			<div class="send_coin">
+			<input type="button" id="soukin" value="送金" onclick="location.href = './send_list.html'">			
+			</div>
+
+			<!-- 取引 -->
+			<div class="transaction">
+				<input type= "button" id="torihiki" value="取引">
+			</div>
+
+			<!-- 設定 --> 
+			<div class="setting">
+				<input type= "button" id="settei" value="設定">
+			</div>
+
+			<!-- 通知 --> 
+			<div class="notification">
+				<input type= "button" id="tuuti" value="通知">
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
