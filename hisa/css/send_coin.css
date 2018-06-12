@@ -1,0 +1,137 @@
+html {
+	height: 100%;
+}
+
+body {
+  /* iosの長押し無効 */
+   -webkit-touch-callout: none;
+   /* 文字サイズの自動調整 */
+   -webkit-text-size-adjust: none;
+   /* 文字の選択不可 */
+   -webkit-user-select: none;
+
+	height: 100%;
+
+  background-color: #5cbfd8;
+  /* フォント指定 */
+  /*font-family: "";*/
+}
+
+/* コンテナ */
+.containerX { 
+	height: 100%;
+    /* 要素に対してグリッドコンテナを指定 */
+    display: grid;
+    /* 行を指定 */
+    grid-template-columns: 1fr 1fr;
+    /* 行と列の間隔を指定 */
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas:
+         "areaA areaA"
+         "areaB areaB"
+         "areaC areaD";
+} 
+
+/* コンテナ内のdiv全部 */
+.containerX > div {
+   padding: 1em;
+}
+
+/* 送金相手 */
+.acount{
+   grid-area: areaA;
+
+   background-color: #5cbfd8;
+   padding: 1em;
+}
+
+/* 相手の名前 */
+#acount_name {
+   font-size: 30px;
+   background-color: #f39832;
+   height: 50%;
+   padding: 3%;
+   text-align: center;
+
+   /* 影 */
+   box-shadow: 2px 2px 3px 1px #666;
+   -moz-box-shadow: 2px 2px 3px 1px #666;
+   -webkit-box-shadow: 2px 2px 3px 1px #666;
+}
+
+/* 金額入力 */
+.input_coin { 
+   grid-area: areaB;
+}
+
+/* テキストボックス */
+#coinbox {
+   font-size: 36px;
+   width: 100%;
+   height: 80%;
+}
+
+/* 決定 */
+.decision { 
+   grid-area: areaC; 
+} 
+
+/* キャンセル */
+.cancel { 
+   grid-area: areaD;
+}
+
+
+/* ボタン */
+#yes {
+   font-size: 36px;
+   width: 99%;
+   height: 50%;
+   border: none;
+   border-bottom: 1px solid black;
+   background-color: white;
+
+   box-shadow: 2px 2px 3px 1px #666;
+   -moz-box-shadow: 2px 2px 3px 1px #666;
+   -webkit-box-shadow: 2px 2px 3px 1px #666;
+}
+#no {
+   font-size: 24px;
+   width: 99%;
+   height: 50%;
+   border: none;
+   border-bottom: 1px solid black;
+   background-color: white;
+
+   box-shadow: 2px 2px 3px 1px #666;
+   -moz-box-shadow: 2px 2px 3px 1px #666;
+   -webkit-box-shadow: 2px 2px 3px 1px #666;
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+         background-position:left center;
+         padding:75px 0px 75px 170px;   /* padding-top + padding-bottom + text area = image height */
+         margin:-90px 0px 0px -198px;   /* offset vertical: half of image height */
+                                       /* offset horizontal: half of image width and text area width */
+    }
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
