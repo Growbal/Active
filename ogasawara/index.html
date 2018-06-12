@@ -12,10 +12,6 @@
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 		<!-- cssへのリンク -->
 		<link rel="stylesheet" type="text/css" href="css/home.css">
-		<!-- jsへのリンク 
-		<script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="js/home.js"></script>
-		-->
 		
 		<title>pen-d Home</title>
 	</head>
@@ -26,34 +22,36 @@
 
 			<!-- 残高表示 -->
 			<div class="result">
-			<p>残高</p>
-				<p id="coin_unit">
-					<input type="text" id="coin" value="0000" disabled="disabled">
-				pen-D</p>
+				<div id="result_unit">
+					<p id= "unit">残高</p>
+					<p id= "coin">0</p>
+					pen-D</div>
 			</div>
 
 			<!-- 送金 --> 
-			<div class="send_coin">
-			<input type="button" id="soukin" value="送金" onclick="location.href = './send_list.html'">			
+			<div class="send_coin">			
+				<button type="button" id="soukin">送金</button>
 			</div>
 
 			<!-- 取引 -->
 			<div class="transaction">
-				<input type= "button" id="torihiki" value="取引">
+				<button type="button" id="torihiki">取引</button>
 			</div>
 
 			<!-- 設定 --> 
 			<div class="setting">
-				<input type= "button" id="settei" value="設定">
+				<button type="button" id="settei">設定</button>
 			</div>
 
 			<!-- 通知 --> 
 			<div class="notification">
-				<input type= "button" id="tuuti" value="通知">
+				<button type="button" id="tuuti">通知</button>
 			</div>
 
 		</div>
 
-
+		<!-- jsへのリンク -->
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
 	</body>
 </html>
