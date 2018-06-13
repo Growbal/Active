@@ -72,8 +72,12 @@ body {
 .result {
    grid-area: areaB;
 
+/*   width: 99%;
+   height: 98%;*/
    width: 99%;
-   height: 98%;
+   height: 100%;
+
+   border: solid 2px #c0c0c0;
 
 
    font-size: 24px;
@@ -84,21 +88,11 @@ body {
    display: grid;
    /* 行と列の間隔を指定 */
    grid-template-columns: 60% 40%;
-
-   /* 影 */
-   box-shadow: 2px 2px 3px 1px #666;
-   -moz-box-shadow: 2px 2px 3px 1px #666;
-   -webkit-box-shadow: 2px 2px 3px 1px #666;
-
-   /* 角を丸く */
-   /*safari, chorome用*/
-   -webkit-border-radius: 50%;
-   /*-webkit-border-radius: 15px;*/
-
 }
 
 /* 残高の数値 */
 #coin {
+   grid-row: 2;
    grid-column: 1;
 
    text-align: right;
@@ -109,6 +103,7 @@ body {
 
 /*通貨単位*/
 #unit {
+   grid-row: 2;
    grid-column: 2;
 
    text-align: left;
@@ -141,26 +136,19 @@ body {
 #soukin, #torihiki, #settei, #tuuti{
    font-size: 36px;
 
-   width: 96%;
+/*   width: 96%;
    height: 96%;
    margin-top: 2%;
-   margin-left: 2%;
+   margin-left: 2%;*/
+   width: 100%;
+   height: 100%;
+   
+   border: solid 1px #c0c0c0;
 
-
-   border: none;
-   border-bottom: 1px solid black;
    background-color: white;
 
    /* フォント指定 */
    /*font-family: "";*/
-
-   /* 影 */
-   box-shadow: 2px 2px 3px 1px #666;
-   -moz-box-shadow: 2px 2px 3px 1px #666;
-   -webkit-box-shadow: 2px 2px 3px 1px #666;
-
-   /* 角を丸く */
-   -webkit-border-radius: 15px;
 }
 
 /*基本は余白なし*/
