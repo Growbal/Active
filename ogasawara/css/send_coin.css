@@ -108,6 +108,11 @@ body {
    -webkit-box-shadow: 2px 2px 3px 1px #666;
 }
 
+/*基本は余白なし*/
+* { 
+   margin: 0px; 
+   padding: 0px; 
+}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {

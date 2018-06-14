@@ -16,7 +16,7 @@ torihikiBtn.onclick = function(){
 }
  //テストで、innerHTMlで数値をいじるようにする
 setteiBtn.onclick = function(){
-	coinNum.innerHTML  = "100000"
+	coinNum.innerHTML  = "1000000"
 }
 tuutiBtn.onclick = function(){
 	coinNum.innerHTML  = "0"
