@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+</head>
+
+<body>
+    <p>This is my page</p>
+    <form action="" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user-name">
+        </div>
+        <div>
+            <label for="mail">Mail:</label>
+            <input type="email" id="mail" name="user-mail">
+        </div>
+        <div>
+            <label for="msg">Message:</label>
+            <textarea name="user-message" id="msg" cols="30" rows="10">aa</textarea>
+        </div>
+        <div>
+            <label for="button">
+                This is a button.
+            </label>
+            <button type="submit" id="button">Send your message</button>
+        </div>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Fruit juice size</legend>
+            <p>
+                <input type="radio" name="size" id="size_1" value="small" />
+                <label for="size_1">Small</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_2" value="medium" />
+                <label for="size_2">Medium</label>
+            </p>
+            <p>
+
+                <label for="size_3">
+                    <input type="radio" name="size" id="size_3" value="large" /> Large
+                </label>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
