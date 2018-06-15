@@ -10,7 +10,7 @@ body {
    /* 文字の選択不可 */
    -webkit-user-select: none;
 
-	height: 100%;
+   height: 100%;
 
    background-color: #ffffff;
 
@@ -45,31 +45,26 @@ body {
    font-weight: 800;
 
    border-bottom: medium solid #e0e0e0;
-}
 
-/*メニュー*/
-#view_menu {
    font-size: 6vw;
    color: #ffffff;
    
    text-align: left;
-   border: none;
 
-   display: inline;
-
+   padding-left: 2%;
 }
-
 
 /* 残高 */
 .balance {
    grid-area: areaB;
 
-   background-color: #f3f3f3;
-   /*background-color: #f39832;*/
+   background-color: #008BD1;
+   
+   color: #ffffff;
 
    width: 96%;
-   height: 96%;
-   margin-top: 1%;
+   height: 70%;
+   margin-top: 13%;
    margin-left: 1%;
 
    /* 要素に対してグリッドコンテナを指定 */
@@ -78,20 +73,20 @@ body {
    grid-template-columns: 60% 40%;
    grid-template-rows: 50% 50%;
 
-   /*border: solid;*/
+   border: none;
    /* 影 */
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 
    /* 角を丸く */
    /*safari, chorome用*/
-   -webkit-border-radius: 15%;
+   -webkit-border-radius: 15px;
 }
 
 /*残高イメージ*/
 #balance_img {
    grid-column: 1;
    grid-row: 1;
-   padding-top: 40%;
+   padding-top: 22%;
    padding-left: 10%;
 }
 
@@ -99,10 +94,11 @@ body {
 #user_name {
    grid-column: 2;
    grid-row: 1;
-   font-size: 6vw;
+   font-size: 5vw;
+   color: #ffffff;
    
    text-align: center;
-   padding-top: 80%;
+   padding-top: 47%;
 }
 
 
@@ -159,7 +155,7 @@ body {
    margin-left: 4%;
    margin-right: 4%;
 
-   /*border: solid;*/
+   border: none;
 
    /* 影 */
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
