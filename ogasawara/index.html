@@ -20,32 +20,49 @@
 		<!-- コンテナ -->
 		<div class="container">
 
+			<!-- メニュー表示 -->
+			<div class= "header">
+				<img src="img/balance_header.png">
+				<p id= "view_menu">残高</p>
+				<p id= "user_name">テスト　ユーザー名</p>
+			</div>
+
 			<!-- 残高表示 -->
-			<div class="result">
-				<div id="result_unit">
-					<p id= "unit">残高</p>
-					<p id= "coin">0</p>
-					pen-D</div>
+			<div class="balance">
+				<p id= "coin">1000000</p>
+				<p id="unit">&nbsp;pen-D</p>
 			</div>
 
 			<!-- 送金 --> 
 			<div class="send_coin">			
-				<button type="button" id="soukin">送金</button>
+				<button type="button" id="soukin">
+					<img src="img/coin.png"><br>
+					送金
+				</button>
 			</div>
 
-			<!-- 取引 -->
+			<!-- 取引履歴 -->
 			<div class="transaction">
-				<button type="button" id="torihiki">取引</button>
+				<button type="button" id="torihiki">
+					<img src="img/transaction.png"><br>
+					取引履歴
+				</button>
 			</div>
 
 			<!-- 設定 --> 
 			<div class="setting">
-				<button type="button" id="settei">設定</button>
+				<button type="button" id="settei">
+					<img src="img/setting.png"><br>
+					設定
+				</button>
 			</div>
 
 			<!-- 通知 --> 
 			<div class="notification">
-				<button type="button" id="tuuti">通知</button>
+				<button type="button" id="tuuti">
+					<img src="img/notification.png"><br>
+					通知
+				</button>
 			</div>
 
 		</div>
