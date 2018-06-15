@@ -12,10 +12,12 @@ body {
 
 	height: 100%;
 
-  background-color: #5cbfd8;
+  background-color: white;
   /* フォント指定 */
   /*font-family: "";*/
 }
+
+
 
 /* コンテナ */
 .containerX { 
@@ -25,12 +27,22 @@ body {
     /* 行を指定 */
     grid-template-columns: 1fr 1fr;
     /* 行と列の間隔を指定 */
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 0.25fr 1fr 1fr 2fr;
     grid-template-areas:
          "areaA areaA"
          "areaB areaB"
-         "areaC areaD";
+         "areaC areaC"
+         "areaD areaE";
 } 
+
+header{
+    grid-area: areaA;
+
+    height: 100%;
+    background-color: #23d100;
+    font-weight: 800;
+    border-bottom: medium solid #e0e0e0;
+}
 
 /* コンテナ内のdiv全部 */
 .containerX > div {
@@ -39,29 +51,35 @@ body {
 
 /* 送金相手 */
 .acount{
-   grid-area: areaA;
+   grid-area: areaB;
 
-   background-color: #5cbfd8;
-   padding: 1em;
+   height: 60%;
+
+   background-color: #f3f3f3;
+   margin-top: 3%;
+   border-radius: 15px;
+   border: 1px solid;
 }
 
 /* 相手の名前 */
 #acount_name {
    font-size: 30px;
-   background-color: #f39832;
+   background-color: #f3f3f3;
    height: 50%;
    padding: 3%;
+   margin: 1%;
    text-align: center;
+   border-radius: 5px;
 
    /* 影 */
-   box-shadow: 2px 2px 3px 1px #666;
+   /* box-shadow: 2px 2px 3px 1px #666;
    -moz-box-shadow: 2px 2px 3px 1px #666;
-   -webkit-box-shadow: 2px 2px 3px 1px #666;
+   -webkit-box-shadow: 2px 2px 3px 1px #666; */
 }
 
 /* 金額入力 */
 .input_coin { 
-   grid-area: areaB;
+   grid-area: areaC;
 }
 
 /* テキストボックス */
@@ -69,43 +87,37 @@ body {
    font-size: 36px;
    width: 100%;
    height: 80%;
+   padding-right: 1%;
+   border: 1px solid ;
+   background-color: #f3f3f3;
 }
 
 /* 決定 */
 .decision { 
-   grid-area: areaC; 
+   grid-area: areaD; 
 } 
 
 /* キャンセル */
 .cancel { 
-   grid-area: areaD;
+   grid-area: areaE;
 }
 
 
 /* ボタン */
-#yes {
+#yes , #no {
    font-size: 36px;
    width: 99%;
    height: 50%;
    border: none;
    border-bottom: 1px solid black;
-   background-color: white;
+   background-color: #f3f3f3;
+   border-radius: 5%;
 
-   box-shadow: 2px 2px 3px 1px #666;
-   -moz-box-shadow: 2px 2px 3px 1px #666;
-   -webkit-box-shadow: 2px 2px 3px 1px #666;
+    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.26); 
+ 
 }
 #no {
    font-size: 24px;
-   width: 99%;
-   height: 50%;
-   border: none;
-   border-bottom: 1px solid black;
-   background-color: white;
-
-   box-shadow: 2px 2px 3px 1px #666;
-   -moz-box-shadow: 2px 2px 3px 1px #666;
-   -webkit-box-shadow: 2px 2px 3px 1px #666;
 }
 
 
