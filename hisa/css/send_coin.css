@@ -127,7 +127,9 @@ header{
 
 /* ボタン */
 #yes , #no {
-   font-size: 8vw;
+   background-color: #f3f3f3;
+
+   font-size: 6vw;
 
    width: 90%;
    height: 45%;
@@ -137,15 +139,10 @@ header{
 
    border: none;
 
-   background-color: #f3f3f3;
-
    border-radius: 15px;
 
    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.26); 
  
-}
-#no {
-   font-size: 24px;
 }
 
 /* 余白を基本的になしにする */
