@@ -1,66 +1,74 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Pen-D</title>
-    </head>
-    <body>
-        <header>
-            <h1>仮想通貨プロジェクト</h1>
-        </header>
-        <!--現在の仮想通貨の枚数表示？-->
-      <div class="result">
-          <p>￥：
-        <input type="text" id="coin" value="000" disabled="disabled">
-        </p> 
-      </div>
+	<head>
+		<!-- セキュリティポリシー -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+		<!-- 英数字列を電話番号やメールアドレスとして認識しない -->
+		<meta name="format-detection" content="telephone=no">
+		<!-- タッチを強調したりする -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 解像度とかレイアウトのもろもろの設定 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<!-- cssへのリンク -->
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		
+		<title>pen-d Home</title>
+	</head>
+	<body>
 
-      <div class="send_coin">
-          <input type="button" id="soukin" value="送金" onclick="location.href = './send_coin.html'">
-      </div>
+		<!-- コンテナ -->
+		<div class="container">
 
-      <div class="transaction">
-            <input type="button" id="torihiki" value="取引">
-        </div>
+			<!-- メニュー表示 -->
+			<div class= "header">
+				pen-D
+			</div>
 
-      <div class="setting">
-            <input type="button" id="setting" value="設定">
-      </div>
+			<!-- 残高表示 -->
+			<div class="balance">
+				<img src="img/balance.png" id= "balance_img">
+				<p id= "user_name">ユーザー名</p>
+				<p id= "coin">1000000</p>
+				<p id="unit">&nbsp;pen-D</p>
+			</div>
 
-      <div class="notification">
-            <input type="button" id="tuuti" value="通知">
-      </div>
+			<!-- 送金 --> 
+			<div class="send_coin">
+				<button type="button" id="soukin">
+					<img src="img/coin2.png"><br>
+					送金
+				</button>
+			</div>
 
-    </body>
+			<!-- 取引履歴 -->
+			<div class="transaction">
+				<button type="button" id="torihiki">
+					<img src="img/transaction.png"><br>
+					取引履歴
+				</button>
+			</div>
+
+			<!-- 設定 --> 
+			<div class="setting">
+				<button type="button" id="settei">
+					<img src="img/setting.png"><br>
+					設定
+				</button>
+			</div>
+
+			<!-- 通知 --> 
+			<div class="notification">
+				<button type="button" id="tuuti">
+					<img src="img/notification.png"><br>
+					通知
+				</button>
+			</div>
+
+		</div>
+
+		<!-- jsへのリンク -->
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+	</body>
 </html>
