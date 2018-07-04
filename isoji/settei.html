@@ -10,10 +10,11 @@
 		<meta name="msapplication-tap-highlight" content="no">
 		<!-- 解像度とかレイアウトのもろもろの設定 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-		<!-- cssへのリンク -->
-		<link rel="stylesheet" type="text/css" href="css/home.css">
 
-		<title>pen-d Home</title>
+		<!-- cssへのリンク -->
+		<link rel="stylesheet" type="text/css" href="css/settei.css">
+
+		<title>pen-d sample</title>
 	</head>
 	<body>
 
@@ -22,53 +23,54 @@
 
 			<!-- メニュー表示 -->
 			<div class= "header">
-				pen-D
+				設定
 			</div>
 
-			<!-- 残高表示 -->
-			<div class="balance">
-				<img src="img/balance.png" id= "balance_img">
-				<p id= "user_name">ユーザー名</p>
-				<p id= "coin">1000000</p>
-				<p id="unit">&nbsp;pen-D</p>
-			</div>
-
-			<!-- 送金 -->
-			<div class="send_coin">
-				<button type="button" id="soukin">
-					<img src="img/coin2.png"><br>
-					送金
+			<!-- ボタン -->
+			<div class="buttonA">
+				<button type="button" id="btnA">
+					ユーザー変更
 				</button>
 			</div>
 
-			<!-- 取引履歴 -->
-			<div class="transaction">
-				<button type="button" id="torihiki">
-					<img src="img/transaction.png"><br>
-					取引履歴
-				</button>
-			</div>
-
-			<!-- 設定 -->
-			<div class="setting">
-				<button type="button" id="settei">
-					<img src="img/setting.png"><br>
-					設定
-				</button>
-			</div>
-
-			<!-- 通知 -->
-			<div class="notification">
-				<button type="button" id="tuuti">
+			<!-- ボタン -->
+			<div class="buttonB">
+				<button type="button" id="btnB">
 					<img src="img/notification.png"><br>
-					通知
+					パスワード変更
 				</button>
 			</div>
-
+      <!-- ボタン -->
+      <div class="buttonC">
+        <button type="button" id="btnC">
+          <img src="img/notification.png"><br>
+          ボタンC
+        </button>
+      </div>
+      <!-- ボタン -->
+			<div class="buttonD">
+				<button type="button" id="btnD">
+					<img src="img/notification.png"><br>
+					ボタンD
+				</button>
+			</div>
+      <!-- ボタン -->
+			<div class="buttonE">
+				<button type="button" id="btnE">
+					<img src="img/notification.png"><br>
+					ボタンE
+				</button>
+			</div>
+      <!-- ボタン -->
+			<div class="buttonF">
+				<button type="button" id="btnF">
+					<img src="img/notification.png"><br>
+					ボタンF
+				</button>
+			</div>
 		</div>
 
 		<!-- jsへのリンク -->
-		<script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="js/home.js"></script>
+		<script type="text/javascript" src="sample.js"></script>
 	</body>
 </html>

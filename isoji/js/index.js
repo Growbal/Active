@@ -1,46 +1,39 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
+// html内の要素を読み込む
+var soukinBtn = document.querySelector("#soukin");
+var torihikiBtn = document.querySelector("#torihiki");
+var setteiBtn = document.querySelector("#settei");
+var tuutiBtn = document.querySelector("#tuuti");
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-    },
+// 数値
+var coinNum = document.querySelector("#coin")
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+// ボタンが押されたときに関数を実行する
+soukinBtn.onclick = function(){
+	GoLink(1);
+}
+torihikiBtn.onclick = function(){
+	GoLink(2);
+}
+ //テストで、innerHTMlで数値をいじるようにする
+setteiBtn.onclick = function(){
+	coinNum.innerHTML  = "100000"
+}
+tuutiBtn.onclick = function(){
+	coinNum.innerHTML  = "0"
+}
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-app.initialize();
+// 数字に対応したページへ移動する関数
+function GoLink(no){
+	if(no == 1){
+		href = "./send_list.html";
+	}else if(no == 2){
+		href = "./send_coin.html";
+	}else if(no == 3){
+		href = "./send_coin.html";
+	}else if(no == 4){
+		href = "./send_coin.html";
+	}else{
+		href = "./send_coin.html";
+	}
+ 	location.href = href;
+}
