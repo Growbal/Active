@@ -34,7 +34,7 @@ body {
          "areaE areaF";
 }
 
-/*ヘッダー*/
+/*メニュー表示*/
 .header {
    grid-area: areaA;
 
@@ -65,7 +65,7 @@ body {
    width: 96%;
    height: 70%;
    margin-top: 13%;
-   margin-left: 2%;
+   margin-left: 1%;
 
    /* 要素に対してグリッドコンテナを指定 */
    display: grid;
@@ -150,7 +150,7 @@ body {
 
    width: 92%;
    height: 92%;
-   margin-top: 2%
+   margin-top: 2%;
    margin-bottom: 2%;
    margin-left: 4%;
    margin-right: 4%;
