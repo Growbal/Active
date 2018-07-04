@@ -19,7 +19,7 @@ setteiBtn.onclick = function(){
 	coinNum.innerHTML  = "1000000"
 }
 tuutiBtn.onclick = function(){
-	coinNum.innerHTML  = "0"
+	GoLink(4);
 }
 
 // 数字に対応したページへ移動する関数
@@ -31,7 +31,7 @@ function GoLink(no){
 	}else if(no == 3){
 		href = "./send_coin.html";
 	}else if(no == 4){
-		href = "./send_coin.html";
+		href = "./notice.html";
 	}else{
 		href = "./send_coin.html";
 	}
