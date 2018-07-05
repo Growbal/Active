@@ -1,0 +1,114 @@
+html {
+	height: 100%;
+}
+
+body {
+  /* iosの長押し無効 */
+   -webkit-touch-callout: none;
+   /* 文字サイズの自動調整 */
+   -webkit-text-size-adjust: none;
+   /* 文字の選択不可 */
+   -webkit-user-select: none;
+
+	height: 100%;
+
+  background-color: #ffffff;
+
+  /* フォント指定 */
+  /*font-family: "";*/
+}
+
+/* コンテナ */
+.containerX {
+	height: 100%;
+    /* 要素に対してグリッドコンテナを指定 */
+    display: grid;
+    /* 行を指定 */
+    grid-template-rows: 6% 22% 22% 50%;
+    grid-template-areas:
+         "areaH "
+         "areaA "
+         "areaB "
+         "areaC ";
+}
+
+/* メニュー表示 */
+header{
+    grid-area: areaH;
+
+    height: 100%;
+
+    background-color: #23d100;
+
+    font-weight: 800;
+
+    border-bottom: medium solid #e0e0e0;
+
+    font-size: 6vw;
+    color: #ffffff;
+
+    text-align: left;
+
+    padding-left: 2%;
+}
+
+
+/
+/* 金額入力 */
+.name{
+   grid-area: areaA;
+}
+
+/* テキストボックス */
+#name_box {
+   background-color: #f3f3f3;
+
+   font-size: 24px;
+
+   width: 95%;
+   height: 80%;
+
+   margin-top: 5%;
+   margin-left: 2.5%;
+
+   text-align: center;
+
+
+   border: none;
+
+   border-radius: 15px;
+
+   box-shadow:  0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+/* 決定 */
+.decision {
+   grid-area: areaB;
+}
+
+/* ボタン */
+#yes{
+   background-color: #008bd1;
+
+   font-size: 6vw;
+	 color:#ffffff;
+
+   width: 90%;
+   height: 45%;
+
+   margin-top: 10%;
+   margin-left: 5%;
+
+   border: none;
+
+   border-radius: 15px;
+
+   box-shadow:  0 2px 5px rgba(0, 0, 0, 0.26);
+
+}
+
+/* 余白を基本的になしにする */
+*{
+    margin: 0px;
+    padding: 0px;
+}

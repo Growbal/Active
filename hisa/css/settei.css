@@ -1,0 +1,137 @@
+/* 全体に適応 */
+* {
+  /* 基本は余白なし */
+   margin: 0px;
+   padding: 0px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+   background: #ffffff;
+
+   height: 100%;
+
+   /* iosの長押し無効 */
+   -webkit-touch-callout: none;
+   /* 文字サイズの自動調整 */
+   -webkit-text-size-adjust: none;
+   /* 文字の選択不可 */
+   -webkit-user-select: none;
+}
+
+/* body内ではグリッドレイアウトを使用して画面をデザインする */
+/* コンテナ(グリッドを包括するもの) */
+.container {
+	height: 100%;
+
+   /* この要素をグリッドのコンテナに指定 */
+   display: grid;
+   /* 横の区切りを指定 (合計が100%になるように画面を区切る) */
+   grid-template-columns: 50% 50%;
+   /* 縦の区切りを指定 (合計が100%になるように画面を区切る) */
+   /* 上から順に、ヘッダーの幅を6%に、残りの94%を2:1:1で割り振る */
+   grid-template-rows:6% 31.3% 31.4% 31.3%;
+   /* グリッド要素の配置を指定 */
+   grid-template-areas:
+        "areaH areaH" /* ヘッダー */
+        "areaA areaB"  /* ボタン */
+        "areaC areaD"  /* ボタン */
+        "areaE areaF";  /* ボタン */
+}
+
+/***********************************************************/
+
+/* なんとなくこんな感じ
+#(or .)名前 {
+   グリッドエリアの記述
+
+   背景色の記述
+   ......
+   ......
+
+   タグの大きさ・マージン等の記述
+   ......
+   ......
+
+   文字の大きさ・色等の記述
+   ......
+   ......
+
+   下線や影などのデザインの記述
+   ......
+   ......
+}
+*/
+
+/***********************************************************/
+
+/*ヘッダー*/
+.header {
+   grid-area: areaH;
+
+   /*黄緑*/
+   background: #23d100;
+
+   height: 100%;
+   padding-left: 2%;
+
+   font-size: 6vw;
+   font-weight: 800;
+   text-align: left;
+   color: #ffffff;
+
+   /* グレーの下線を引く */
+   border-bottom: medium solid #e0e0e0;
+}
+
+/***********************************************************/
+
+/* ボタンA */
+.buttonA {
+   grid-area: areaA;
+   padding-top: 4%;
+}
+
+/* ボタンB */
+.buttonB {
+   grid-area: areaB;
+   padding-top: 4%;
+}
+/* ボタンC */
+.buttonC{
+   grid-area: areaC;
+}
+/* ボタンD */
+.buttonD{
+   grid-area: areaD;
+}
+/* ボタンE */
+.buttonE{
+   grid-area: areaE;
+}
+/* ボタンF */
+.buttonF{
+   grid-area: areaF;
+}
+/* 大きいボタン */
+#btnA, #btnB,#btnC,#btnD,#btnE,#btnF{
+   background-color: #f3f3f3;
+
+   font-size: 5vw;
+
+   width: 92%;
+   height: 92%;
+   margin-top: 2%
+   margin-bottom: 2%;
+   margin-left: 4%;
+   margin-right: 4%;
+
+   border: none;
+   /* 影 */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+   /* 角を丸く */
+   -webkit-border-radius: 15px;
+}

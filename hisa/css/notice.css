@@ -103,7 +103,7 @@ header{
 
 }
 
-.notification{
+#notice{
 	height: 15%;
 
 	width: 60%;
@@ -114,4 +114,8 @@ header{
 
 	border: none;
 	border-radius: 10%;
+}
+
+#modal{
+	background-color: #33dd33;
 }

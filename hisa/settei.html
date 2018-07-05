@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- セキュリティポリシー -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+		<!-- 英数字列を電話番号やメールアドレスとして認識しない -->
+		<meta name="format-detection" content="telephone=no">
+		<!-- タッチを強調したりする -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 解像度とかレイアウトのもろもろの設定 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+		<!-- cssへのリンク -->
+		<link rel="stylesheet" type="text/css" href="css/settei.css">
+
+		<title>pen-d sample</title>
+	</head>
+	<body>
+
+		<!-- コンテナ -->
+		<div class="container">
+
+			<!-- メニュー表示 -->
+			<div class= "header">
+				設定
+			</div>
+
+			<!-- ボタン -->
+			<div class="buttonA">
+				<button type="button" id="btnA">
+					ユーザー変更
+				</button>
+			</div>
+
+			<!-- ボタン -->
+			<div class="buttonB">
+				<button type="button" id="btnB">
+					<img src="img/notification.png"><br>
+					パスワード変更
+				</button>
+			</div>
+      <!-- ボタン -->
+      <div class="buttonC">
+        <button type="button" id="btnC">
+          <img src="img/notification.png"><br>
+          ボタンC
+        </button>
+      </div>
+      <!-- ボタン -->
+			<div class="buttonD">
+				<button type="button" id="btnD">
+					<img src="img/notification.png"><br>
+					ボタンD
+				</button>
+			</div>
+      <!-- ボタン -->
+			<div class="buttonE">
+				<button type="button" id="btnE">
+					<img src="img/notification.png"><br>
+					ボタンE
+				</button>
+			</div>
+      <!-- ボタン -->
+			<div class="buttonF">
+				<button type="button" id="btnF">
+					<img src="img/notification.png"><br>
+					ボタンF
+				</button>
+			</div>
+		</div>
+
+		<!-- jsへのリンク -->
+		<script type="text/javascript" src="sample.js"></script>
+	</body>
+</html>

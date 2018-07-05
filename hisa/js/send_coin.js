@@ -10,7 +10,7 @@ yesBtn.onclick = function(){
     else{
         if(window.confirm(coinbox.value + " pen-D 送金します。\nよろしいですか？")){
             console.log(coinbox.value + " pen-D 送金しました。");
-        
+
         }else{
             alert("キャンセルしました。");
         }
@@ -18,5 +18,5 @@ yesBtn.onclick = function(){
 }
 
 noBtn.onclick = function(){
-    location.href = './index.html';
+    location.href = './send_list.html';
 }
