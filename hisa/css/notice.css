@@ -116,6 +116,14 @@ header{
 	border-radius: 10%;
 }
 
-#modal{
-	background-color: #33dd33;
+.modal{
+	display: none;
+	height: 40%;
+	width: 60%;
+
+	margin-top: 40%;
+	margin-left: 20%;
+	position: fixed;
+	background-color: red;
+	z-index: 1;
 }
