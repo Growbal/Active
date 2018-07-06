@@ -103,7 +103,7 @@ header{
 
 }
 
-.notification{
+#notice{
 	height: 15%;
 
 	width: 60%;
@@ -114,4 +114,16 @@ header{
 
 	border: none;
 	border-radius: 10%;
+}
+
+.modal{
+	display: none;
+	height: 40%;
+	width: 60%;
+
+	margin-top: 40%;
+	margin-left: 20%;
+	position: fixed;
+	background-color: red;
+	z-index: 1;
 }

@@ -14,9 +14,8 @@ soukinBtn.onclick = function(){
 torihikiBtn.onclick = function(){
 	GoLink(2);
 }
- //テストで、innerHTMlで数値をいじるようにする
 setteiBtn.onclick = function(){
-	coinNum.innerHTML  = "1000000"
+	GoLink(3);
 }
 tuutiBtn.onclick = function(){
 	GoLink(4);
@@ -27,13 +26,13 @@ function GoLink(no){
 	if(no == 1){
 		href = "./send_list.html";
 	}else if(no == 2){
-		href = "./send_coin.html";
+		href = "./index.html";
 	}else if(no == 3){
-		href = "./send_coin.html";
+		href = "./settei.html";
 	}else if(no == 4){
 		href = "./notice.html";
 	}else{
-		href = "./send_coin.html";
+		console.log("どこにも遷移しません。");
 	}
  	location.href = href;
 }
