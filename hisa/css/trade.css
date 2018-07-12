@@ -1,0 +1,58 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  /* iosの長押し無効 */
+  -webkit-touch-callout: none;
+  /* 文字サイズの自動調整 */
+  -webkit-text-size-adjust: none;
+  /* 文字の選択不可 */
+  -webkit-user-select: none;
+  background-color: #ffffff;
+
+  height:100Vh;
+  width:100%;
+}
+
+header{
+  height: 6%;
+  background-color: #23d100;
+  font-size: 6vw;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 2%;
+  border-bottom: medium solid #e0e0e0;
+}
+
+.view{
+  height: 93%;
+  background-color:#ffffff;
+}
+
+.send,.receive{
+  height: 8%;
+  width: 80%;
+
+  margin-top: 5%;
+  margin-left: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+
+  border-radius: 5%;
+}
+
+.send{
+  background-color: #f3f3f3;
+}
+
+.receive{
+  color: #ffffff;
+  background-color: #008db1;
+}
