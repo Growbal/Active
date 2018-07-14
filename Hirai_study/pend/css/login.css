@@ -1,0 +1,169 @@
+/* 全体に適応 */
+
+* {
+    /* 基本は余白なし */
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #ffffff;
+    height: 100%;
+    /* iosの長押し無効 */
+    -webkit-touch-callout: none;
+    /* 文字サイズの自動調整 */
+    -webkit-text-size-adjust: none;
+    /* 文字の選択不可 */
+    -webkit-user-select: none;
+}
+
+/* body内ではグリッドレイアウトを使用して画面をデザインする */
+
+/* コンテナ(グリッドを包括するもの) */
+
+.container {
+    height: 100%;
+    /* この要素をグリッドのコンテナに指定 */
+    display: grid;
+    /* 横の区切りを指定 (合計が100%になるように画面を区切る) */
+    grid-template-columns: 100%;
+    /* 縦の区切りを指定 (合計が100%になるように画面を区切る) */
+    /* 上から順に、ヘッダーの幅を6%に、残りの94%を3:1:1:1で割り振る */
+    grid-template-rows: 6% 46.8% 15.6% 15.6% 15.6%;
+    /* グリッド要素の配置を指定 */
+    grid-template-areas: "areaA"/* ヘッダー */
+    "areaB"/* Pen-D 表示 */
+    "areaC"/* ID入力 */
+    "areaD"/* Pass 入力 */
+    "areaE"/* loginボタン */
+    ;
+}
+
+/***********************************************************/
+
+/* なんとなくこんな感じ
+#(or .)名前 {
+   グリッドエリアの記述
+
+   背景色の記述
+   ......
+   ......
+
+   タグの大きさ・マージン等の記述
+   ......
+   ......
+
+   文字の大きさ・色等の記述
+   ......
+   ......
+
+   下線や影などのデザインの記述
+   ......
+   ......
+}
+*/
+
+/***********************************************************/
+
+/*ヘッダー*/
+
+.header {
+    grid-area: areaA;
+    /*黄緑*/
+    background: #23d100;
+    height: 100%;
+    padding-left: 2%;
+    font-size: 6vw;
+    font-weight: 800;
+    text-align: left;
+    color: #ffffff;
+    /* グレーの下線を引く */
+    border-bottom: medium solid #e0e0e0;
+}
+
+/***********************************************************/
+
+/* グリッド内のグリッド */
+
+.title {
+    grid-area: areaB;
+    /*青*/
+    background: #008BD1;
+    width: 96%;
+    height: 70%;
+    margin-top: 13%;
+    margin-left: 2%;
+    margin-bottom: 13%;
+    margin-right: 2%;
+    color: #ffffff;
+    /* 影 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    /* 角を丸く */
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+/* pタグ */
+
+#clear1, #clear2 {
+    height: 25%;
+}
+
+#login-title {
+    height: 50%;
+    font-size: 24vw;
+    text-align: center;
+    color: #ffffff;
+}
+
+/***********************************************************/
+
+/* 入力フォーム */
+
+.id, .pass, .button {
+    width: 96%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    margin-left: 2%;
+    /* 影 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.id {
+    grid-area: areaC;
+}
+
+.pass {
+    grid-area: areaD;
+}
+
+#input-id, #input-pass, #login-button {
+    background: #f3f3f3;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 8vw;
+}
+
+/***********************************************************/
+
+/* ログインボタン */
+
+.button {
+    grid-area: areaE;
+    width: 33%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#login-button {
+    background: #23d100;
+    color: #ffffff;
+}

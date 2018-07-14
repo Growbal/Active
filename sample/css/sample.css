@@ -1,45 +1,45 @@
 /* 全体に適応 */
-* { 
+
+* {
   /* 基本は余白なし */
-   margin: 0px; 
-   padding: 0px; 
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-   background: #ffffff;
-
-   height: 100%;
-
-   /* iosの長押し無効 */
-   -webkit-touch-callout: none;
-   /* 文字サイズの自動調整 */
-   -webkit-text-size-adjust: none;
-   /* 文字の選択不可 */
-   -webkit-user-select: none;
+  background: #ffffff;
+  height: 100%;
+  /* iosの長押し無効 */
+  -webkit-touch-callout: none;
+  /* 文字サイズの自動調整 */
+  -webkit-text-size-adjust: none;
+  /* 文字の選択不可 */
+  -webkit-user-select: none;
 }
 
 /* body内ではグリッドレイアウトを使用して画面をデザインする */
-/* コンテナ(グリッドを包括するもの) */
-.container { 
-	height: 100%;
 
-   /* この要素をグリッドのコンテナに指定 */
-   display: grid;
-   /* 横の区切りを指定 (合計が100%になるように画面を区切る) */
-   grid-template-columns: 50% 50%;
-   /* 縦の区切りを指定 (合計が100%になるように画面を区切る) */
-   /* 上から順に、ヘッダーの幅を6%に、残りの94%を2:1:1で割り振る */
-   grid-template-rows:6% 47% 23.5% 23.5%;
-   /* グリッド要素の配置を指定 */
-   grid-template-areas:
-        "areaA areaA" /* ヘッダー */
-        "areaB areaB"  /* グリッド内のグリッド */
-        "areaC areaC"  /* リスト */
-        "areaD areaE";  /* ボタン */
+/* コンテナ(グリッドを包括するもの) */
+
+.container {
+  height: 100%;
+  /* この要素をグリッドのコンテナに指定 */
+  display: grid;
+  /* 横の区切りを指定 (合計が100%になるように画面を区切る) */
+  grid-template-columns: 50% 50%;
+  /* 縦の区切りを指定 (合計が100%になるように画面を区切る) */
+  /* 上から順に、ヘッダーの幅を6%に、残りの94%を2:1:1で割り振る */
+  grid-template-rows: 6% 47% 23.5% 23.5%;
+  /* グリッド要素の配置を指定 */
+  grid-template-areas: "areaA areaA"/* ヘッダー */
+  "areaB areaB"/* グリッド内のグリッド */
+  "areaC areaC"/* リスト */
+  "areaD areaE";
+  /* ボタン */
 }
 
 /***********************************************************/
@@ -69,186 +69,167 @@ body {
 /***********************************************************/
 
 /*ヘッダー*/
+
 .header {
-   grid-area: areaA;
-
-   /*黄緑*/
-   background: #23d100;
-
-   height: 100%;
-   padding-left: 2%;
-
-   font-size: 6vw;
-   font-weight: 800;
-   text-align: left;
-   color: #ffffff;
-   
-   /* グレーの下線を引く */
-   border-bottom: medium solid #e0e0e0;
+  grid-area: areaA;
+  /*黄緑*/
+  background: #23d100;
+  height: 100%;
+  padding-left: 2%;
+  font-size: 6vw;
+  font-weight: 800;
+  text-align: left;
+  color: #ffffff;
+  /* グレーの下線を引く */
+  border-bottom: medium solid #e0e0e0;
 }
 
 /***********************************************************/
 
 /* グリッド内のグリッド */
+
 .balance {
-   grid-area: areaB;
-
-   /*青*/
-   background: #008BD1;
-
-   width: 96%;
-   height: 70%;
-   margin-top: 13%;
-   margin-left: 2%;
-   border: none;
-
-   color: #ffffff;
-
-   /* 影 */
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-   /* 角を丸く */
-   -webkit-border-radius: 15px;
-
-   /* この要素をグリッドのコンテナに指定 */
-   display: grid;
-   /* 横の区切りを指定 (合計が100%になるように画面を区切る) */
-   grid-template-columns: 60% 40%;
-   /* 縦の区切りを指定 (合計が100%になるように画面を区切る) */
-   grid-template-rows: 50% 50%;
-   /* グリッド要素の配置を指定 */
-   grid-template-areas:
-      "sampleA sampleB"
-      "sampleC sampleD";
+  grid-area: areaB;
+  /*青*/
+  background: #008BD1;
+  width: 96%;
+  height: 70%;
+  margin-top: 13%;
+  margin-left: 2%;
+  border: none;
+  color: #ffffff;
+  /* 影 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  /* 角を丸く */
+  -webkit-border-radius: 15px;
+  /* この要素をグリッドのコンテナに指定 */
+  display: grid;
+  /* 横の区切りを指定 (合計が100%になるように画面を区切る) */
+  grid-template-columns: 60% 40%;
+  /* 縦の区切りを指定 (合計が100%になるように画面を区切る) */
+  grid-template-rows: 50% 50%;
+  /* グリッド要素の配置を指定 */
+  grid-template-areas: "sampleA sampleB" "sampleC sampleD";
 }
 
 /* 画像の配置 */
+
 #sample_img {
-   grid-area: sampleA;
-
-   padding-top: 22%;
-   padding-left: 10%;
+  grid-area: sampleA;
+  padding-top: 22%;
+  padding-left: 10%;
 }
 
 /* pタグ */
+
 #sample_p1 {
-   grid-area: sampleB;
-
-   padding-top: 47%;
-
-   font-size: 5vw;
-   text-align: center;
-   color: #ffffff;
+  grid-area: sampleB;
+  padding-top: 47%;
+  font-size: 5vw;
+  text-align: center;
+  color: #ffffff;
 }
 
 /* pタグ */
+
 #sample_p2 {
-   grid-area: sampleC;
-
-   font-size: 14vw;
-   text-align: right;
+  grid-area: sampleC;
+  font-size: 14vw;
+  text-align: right;
 }
 
 /* pタグ */
+
 #sample_p3 {
-   grid-area: sampleD;
-
-   text-align: left;
-   padding-top: 10%;
-
-   font-size: 10vw;
+  grid-area: sampleD;
+  text-align: left;
+  padding-top: 10%;
+  font-size: 10vw;
 }
 
 /***********************************************************/
 
 /* リスト */
-.sample_list{
-   grid-area: areaC; 
 
-   background: #ffffff; 
-
-   height: 93%;
-   width: 100%;
-   margin-bottom: 7%;   
-
-   text-align: center;  
-
-   /* スクロールの指定 */
-   overflow: scroll;
+.sample_list {
+  grid-area: areaC;
+  background: #ffffff;
+  height: 93%;
+  width: 100%;
+  margin-bottom: 7%;
+  text-align: center;
+  /* スクロールの指定 */
+  overflow: scroll;
 }
 
 /* リスト内のdiv */
+
 .a_list {
-   background: #f3f3f3;
-
-   width: 96%;
-   margin-bottom: 5%;
-   margin-top: 3%;
-   margin-left: 2%;
-
-   /* 影 */
-   box-shadow:  0 2px 5px rgba(0, 0, 0, 0.26);
+  background: #f3f3f3;
+  width: 96%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  margin-left: 2%;
+  /* 影 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
 /* リスト内の文字 */
-.list_name {   
-   background: #f3f3f3;
 
-   padding: 3% 5%;
-   border:none;
-
-   font-size: 8vw;
-   font-weight: bold;
-
-   /* 自動でレイアウトを調整 */
-   align-content: space-around;
-   /* 改行をなくす。これでボタンと一列に配置できる */
-   display: inline-block;
+.list_name {
+  background: #f3f3f3;
+  padding: 3% 5%;
+  border: none;
+  font-size: 8vw;
+  font-weight: bold;
+  /* 自動でレイアウトを調整 */
+  align-content: space-around;
+  /* 改行をなくす。これでボタンと一列に配置できる */
+  display: inline-block;
 }
 
 /* リスト内のボタン */
-.list_btn{
-   background: #f3f3f3;
 
-   padding: 3% 5%;
-   margin: 2%;
-   
-   font-size: 7vw;
-   font-weight: bold;
-   color: #23d100;
-
-   border:none;
-   /* 相対的に配置 */
-   position: relative;
+.list_btn {
+  background: #f3f3f3;
+  padding: 3% 5%;
+  margin: 2%;
+  font-size: 7vw;
+  font-weight: bold;
+  color: #23d100;
+  border: none;
+  /* 相対的に配置 */
+  position: relative;
 }
 
 /***********************************************************/
 
 /* ボタンA */
-.buttonA { 
-   grid-area: areaD;
+
+.buttonA {
+  grid-area: areaD;
 }
 
 /* ボタンB */
-.buttonB { 
-   grid-area: areaE;
+
+.buttonB {
+  grid-area: areaE;
 }
 
 /* 大きいボタン */
-#btnA, #btnB{
-   background-color: #f3f3f3;
 
-   font-size: 5vw;
-
-   width: 92%;
-   height: 92%;
-   margin-top: 2%
-   margin-bottom: 2%;
-   margin-left: 4%;
-   margin-right: 4%;
-
-   border: none;
-   /* 影 */
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-   /* 角を丸く */
-   -webkit-border-radius: 15px;
+#btnA, #btnB {
+  background-color: #f3f3f3;
+  font-size: 5vw;
+  width: 92%;
+  height: 92%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
+  border: none;
+  /* 影 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  /* 角を丸く */
+  -webkit-border-radius: 15px;
 }
